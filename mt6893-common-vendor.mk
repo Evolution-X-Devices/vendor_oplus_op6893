@@ -459,6 +459,7 @@ PRODUCT_PACKAGES += \
     libcustomer_testvision \
     libcvsd_mtk \
     libdecrypt \
+    libfile_op \
     libformatter \
     libgamehdr \
     libged \
@@ -646,7 +647,6 @@ PRODUCT_PACKAGES += \
     libcomposer_ext \
     libfeature_rss \
     libfft_vendor \
-    libfile_op \
     libhwm-oplus \
     libhwm \
     libifcutils_mtk \
