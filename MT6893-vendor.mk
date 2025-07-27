@@ -249,7 +249,6 @@ PRODUCT_COPY_FILES += \
     vendor/oplus/MT6893/proprietary/odm/firmware/tfa98xx/tfa98xx_vibrator_remain_12_RTP_56_230Hz.bin:$(TARGET_COPY_OUT_ODM)/firmware/tfa98xx/tfa98xx_vibrator_remain_12_RTP_56_230Hz.bin \
     vendor/oplus/MT6893/proprietary/odm/firmware/tfa98xx/tfa98xx_vibrator_remain_12_RTP_56_234Hz.bin:$(TARGET_COPY_OUT_ODM)/firmware/tfa98xx/tfa98xx_vibrator_remain_12_RTP_56_234Hz.bin \
     vendor/oplus/MT6893/proprietary/odm/firmware/tfa98xx/tfa98xx_vibrator_remain_12_RTP_56_237Hz.bin:$(TARGET_COPY_OUT_ODM)/firmware/tfa98xx/tfa98xx_vibrator_remain_12_RTP_56_237Hz.bin \
-    vendor/oplus/MT6893/proprietary/odm/firmware/tfa98xx_t0.cnt:$(TARGET_COPY_OUT_ODM)/firmware/tfa98xx_t0.cnt \
     vendor/oplus/MT6893/proprietary/odm/firmware/tp/20615/FW_FT3518_SAMSUNG.img:$(TARGET_COPY_OUT_ODM)/firmware/tp/20615/FW_FT3518_SAMSUNG.img \
     vendor/oplus/MT6893/proprietary/odm/firmware/tp/20615/FW_FT3518_SAMSUNG_FAE.img:$(TARGET_COPY_OUT_ODM)/firmware/tp/20615/FW_FT3518_SAMSUNG_FAE.img \
     vendor/oplus/MT6893/proprietary/odm/firmware/tp/20615/LIMIT_FT3518_SAMSUNG.img:$(TARGET_COPY_OUT_ODM)/firmware/tp/20615/LIMIT_FT3518_SAMSUNG.img \
