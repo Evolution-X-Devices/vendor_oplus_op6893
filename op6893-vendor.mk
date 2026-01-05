@@ -475,7 +475,8 @@ PRODUCT_COPY_FILES += \
     vendor/oplus/op6893/proprietary/vendor/firmware/soc3_0_ram_wifi_1a_1_hdr.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/soc3_0_ram_wifi_1a_1_hdr.bin \
     vendor/oplus/op6893/proprietary/vendor/firmware/soc3_0_ram_wmmcu_1a_1_hdr.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/soc3_0_ram_wmmcu_1a_1_hdr.bin \
     vendor/oplus/op6893/proprietary/vendor/firmware/valhall-1691526.wa:$(TARGET_COPY_OUT_VENDOR)/firmware/valhall-1691526.wa \
-    vendor/oplus/op6893/proprietary/vendor/lib/egl/egl.cfg:$(TARGET_COPY_OUT_VENDOR)/lib/egl/egl.cfg
+    vendor/oplus/op6893/proprietary/vendor/lib/egl/egl.cfg:$(TARGET_COPY_OUT_VENDOR)/lib/egl/egl.cfg \
+    vendor/oplus/op6893/proprietary/vendor/etc/init/android.hardware.gnss-service.mediatek.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.gnss-service.mediatek.rc
 
 PRODUCT_PACKAGES += \
     libem_support_jni \
@@ -1664,7 +1665,12 @@ PRODUCT_PACKAGES += \
     vendor.oplus.hardware.charger@1.0-service \
     vendor.oplus.hardware.olc@2.0-service \
     vendor.oplus.hardware.oplusSensor@1.0-service \
-    vendor.oplus.hardware.performance@1.0-service
+    vendor.oplus.hardware.performance@1.0-service \
+    android.hardware.gnss-service.mediatek \
+    gnss-mtk.xml \
+    gnss@2.1-service-mtk.xml \
+    android.hardware.gnss-impl-mediatek \
+    android.hardware.gnss@2.1-impl-mediatek
 
 PRODUCT_PACKAGES += \
     vendor_lib_egl_libGLES_mali_so \
