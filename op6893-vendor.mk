@@ -349,6 +349,7 @@ PRODUCT_COPY_FILES += \
     vendor/oplus/op6893/proprietary/vendor/etc/gnss/carrier/agps_profiles_conf2_carrier_Vodafone.xml:$(TARGET_COPY_OUT_VENDOR)/etc/gnss/carrier/agps_profiles_conf2_carrier_Vodafone.xml \
     vendor/oplus/op6893/proprietary/vendor/etc/init/android.hardware.bluetooth@1.1-service-mediatek.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.bluetooth@1.1-service-mediatek.rc \
     vendor/oplus/op6893/proprietary/vendor/etc/init/android.hardware.drm@1.4-service.widevine.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.drm@1.4-service.widevine.rc \
+    vendor/oplus/op6893/proprietary/vendor/etc/init/android.hardware.gnss-service.mediatek.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.gnss-service.mediatek.rc \
     vendor/oplus/op6893/proprietary/vendor/etc/init/android.hardware.graphics.allocator@4.0-service-mediatek.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.graphics.allocator@4.0-service-mediatek.rc \
     vendor/oplus/op6893/proprietary/vendor/etc/init/android.hardware.keymaster@4.1-service.trustonic.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.keymaster@4.1-service.trustonic.rc \
     vendor/oplus/op6893/proprietary/vendor/etc/init/android.hardware.media.c2@1.2-mediatek.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.media.c2@1.2-mediatek.rc \
@@ -475,8 +476,7 @@ PRODUCT_COPY_FILES += \
     vendor/oplus/op6893/proprietary/vendor/firmware/soc3_0_ram_wifi_1a_1_hdr.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/soc3_0_ram_wifi_1a_1_hdr.bin \
     vendor/oplus/op6893/proprietary/vendor/firmware/soc3_0_ram_wmmcu_1a_1_hdr.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/soc3_0_ram_wmmcu_1a_1_hdr.bin \
     vendor/oplus/op6893/proprietary/vendor/firmware/valhall-1691526.wa:$(TARGET_COPY_OUT_VENDOR)/firmware/valhall-1691526.wa \
-    vendor/oplus/op6893/proprietary/vendor/lib/egl/egl.cfg:$(TARGET_COPY_OUT_VENDOR)/lib/egl/egl.cfg \
-    vendor/oplus/op6893/proprietary/vendor/etc/init/android.hardware.gnss-service.mediatek.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.gnss-service.mediatek.rc
+    vendor/oplus/op6893/proprietary/vendor/lib/egl/egl.cfg:$(TARGET_COPY_OUT_VENDOR)/lib/egl/egl.cfg
 
 PRODUCT_PACKAGES += \
     libem_support_jni \
@@ -503,12 +503,8 @@ PRODUCT_PACKAGES += \
     android.hardware.graphics.allocator@4.0-impl-mediatek \
     android.hardware.graphics.mapper@4.0-impl-mediatek \
     vulkan.mali \
-    thermal_hal \
     vendor.mediatek.hardware.bluetooth.audio@2.1-impl \
     vendor.mediatek.hardware.bluetooth.audio@2.2-impl \
-    vendor.mediatek.hardware.camera.atms@1.0-impl \
-    vendor.mediatek.hardware.camera.bgservice@1.1-impl \
-    vendor.mediatek.hardware.camera.isphal@1.0-impl \
     vendor.mediatek.hardware.keymaster_attestation@1.1-impl \
     vendor.mediatek.hardware.mms@1.6-impl \
     vendor.mediatek.hardware.nvram@1.1-impl \
@@ -523,7 +519,6 @@ PRODUCT_PACKAGES += \
     libOpenCL \
     libSensorSave \
     libTEECommon \
-    lib_bsscore \
     lib_iir \
     lib_speech_enh \
     libaaa_ltm \
@@ -533,7 +528,6 @@ PRODUCT_PACKAGES += \
     libaal_mtk \
     libaalservice \
     libaedv \
-    libainrcore \
     libaispq \
     libalsautils-v31 \
     libapmonitor_vendor \
@@ -565,14 +559,7 @@ PRODUCT_PACKAGES += \
     libbluetoothem_mtk \
     libbt-vendor \
     libbwc \
-    libcamdrv_imem \
-    libcamdrv_isp \
-    libcamdrv_tuning_mgr \
-    libcamdrv_twin \
     libcamera_core_hwi \
-    libcameracustom.camera.sensors \
-    libcameracustom.eis \
-    libcameracustom \
     libcapctrl \
     libcares_naptr \
     libcarrierconfig \
@@ -585,10 +572,6 @@ PRODUCT_PACKAGES += \
     libcustomer_testvision \
     libcvsd_mtk \
     libdecrypt \
-    libdip_drv \
-    libdip_imem \
-    libdip_postproc \
-    libeffecthal.base \
     libfile_op \
     libformatter \
     libgamehdr \
@@ -608,9 +591,6 @@ PRODUCT_PACKAGES += \
     libhwconfigurationutil \
     libicd_decoder \
     libimagebuffer_wrapper \
-    libimageio \
-    libimageio_plat_drv \
-    libimageio_plat_pipe \
     libimgsensorca \
     libion_mtk \
     libion_ulit \
@@ -627,18 +607,15 @@ PRODUCT_PACKAGES += \
     libktvvolume \
     libladder \
     liblpcnr \
-    libmfllcore \
     libmidasserviceintf \
     libminiui \
     libmml \
     libmmprofile \
     libmsbc_mtk \
-    libmsnr \
     libmtcloader \
     libmtkares \
     libmtkcutils \
     libmtkhardware_legacy \
-    libmtkisp_metadata \
     libmtklimiter_vendor \
     libmtknetutils \
     libmtkproperty \
@@ -656,9 +633,7 @@ PRODUCT_PACKAGES += \
     libocam_common \
     liboplus.aishutter \
     liboplus_audio_config \
-    liboplus_mtkcam_lightsensorprovider \
     liboplus_platform_hwi \
-    liboppo_arcSoftBokehEngine \
     libpixelflinger \
     libpkm \
     libpq_cust_base \
@@ -678,7 +653,6 @@ PRODUCT_PACKAGES += \
     libsysenv \
     libthha \
     libtlcWidevineModularDrm \
-    libtranslator_mapi_v3.0 \
     libtranslator_mdmi_v2.8.2 \
     libtranslator_utils \
     libudf \
@@ -796,9 +770,14 @@ PRODUCT_PACKAGES += \
     gc02m1b_mipi_mono_IdxMgr \
     hi846_mipi_raw_20615_IdxMgr \
     android.hardware.camera.provider@2.6-impl-mediatek \
+    android.hardware.gnss-impl-mediatek \
+    android.hardware.gnss@2.1-impl-mediatek \
     android.hardware.sensors@2.X-subhal-mediatek \
     hwcomposer.mt6893 \
     sensors.mt6893 \
+    vendor.mediatek.hardware.camera.atms@1.0-impl \
+    vendor.mediatek.hardware.camera.bgservice@1.1-impl \
+    vendor.mediatek.hardware.camera.isphal@1.0-impl \
     vendor.mediatek.hardware.camera.lomoeffect@1.0-impl \
     vendor.mediatek.hardware.videotelephony@1.0-impl \
     imx355_mipi_raw20817_IdxMgr \
@@ -858,11 +837,13 @@ PRODUCT_PACKAGES += \
     libSonyIMX386PdafLibraryWrapper \
     libSonyIMX519PdafLibrary \
     libSonyIMX519PdafLibraryWrapper \
+    lib_bsscore \
     libacdk \
     libadsprpc \
     libaiawb_moon \
     libaiawb_p1ggm \
     libaiawb_sun \
+    libainrcore \
     libarmnn \
     libarmnn_ndk.mtk.vndk \
     libasn1c_core \
@@ -920,8 +901,19 @@ PRODUCT_PACKAGES += \
     libcamalgo.vaidepth \
     libcamalgo.vsf \
     libcamalgo.warp \
+    libcamdrv_imem \
+    libcamdrv_isp \
+    libcamdrv_tuning_mgr \
+    libcamdrv_twin \
+    libcameracustom.camera.sensors \
+    libcameracustom.eis \
+    libcameracustom \
     libcdsprpc \
     libcomposer_ext \
+    libdip_drv \
+    libdip_imem \
+    libdip_postproc \
+    libeffecthal.base \
     libfeature.face \
     libfeature.stereo.provider \
     libfeature.vsdof.hal \
@@ -937,12 +929,17 @@ PRODUCT_PACKAGES += \
     libhwm-oplus \
     libhwm \
     libifcutils_mtk \
+    libimageio \
+    libimageio_plat_drv \
+    libimageio_plat_pipe \
     libispcameraca \
     libkmsetkey \
     libksensor \
+    libmfllcore \
     libmipc \
     libmmagent \
     libmnetlink_v104 \
+    libmsnr \
     libmtk-fusion-ril-prop-vsim \
     libmtk-ril \
     libmtkcam.atmseventmgr \
@@ -1010,6 +1007,7 @@ PRODUCT_PACKAGES += \
     libmtkcam_ulog \
     libmtkconfig \
     libmtkconfigutils \
+    libmtkisp_metadata \
     libmtknetcap \
     libmtkrilutils \
     libmtktinyxml \
@@ -1017,12 +1015,14 @@ PRODUCT_PACKAGES += \
     libneuron_adapter \
     libneuron_platform \
     libnir_neon_driver_ndk.mtk.vndk \
-    libpowerhalwrap_vendor \
+    liboplus_mtkcam_lightsensorprovider \
+    liboppo_arcSoftBokehEngine \
     libratconfig \
     librilfusion \
     libsensor_custom \
     libstorage_otp \
     libtflite_mtk \
+    libtranslator_mapi_v3.0 \
     libtrm \
     libvia-ril \
     libviamipc-ril \
@@ -1511,11 +1511,10 @@ PRODUCT_PACKAGES += \
     libCamera_ov02b10mipiraw20615_Video_4k \
     libDeVIS \
     libEIS \
-    libFilterWrapper \
     libOGLManager \
+    libmtkmipc-ril \
     libRbsFlow \
     libRbsFlow_cap \
-    libSuperTextWrapper \
     libVideoEnhance \
     libWaterMark \
     lib_rectify \
@@ -1575,6 +1574,8 @@ PRODUCT_PACKAGES += \
     vendor.oplus.hardware.performance-V1.0-java \
     android.hardware.neuralnetworks@1.3-service-mtk-mdla-dsp-gpu.xml \
     android.hardware.wifi@1.0-service.xml \
+    gnss-mtk.xml \
+    gnss@2.1-service-mtk.xml \
     lbs_hidl_service@1.0.xml \
     manifest_android.hardware.drm@1.4-service.widevine.xml \
     manifest_hwcomposer.xml \
@@ -1610,6 +1611,7 @@ PRODUCT_PACKAGES += \
     gsm0710muxd \
     android.hardware.bluetooth@1.1-service-mediatek \
     android.hardware.drm@1.4-service.widevine \
+    android.hardware.gnss-service.mediatek \
     android.hardware.graphics.allocator@4.0-service-mediatek \
     android.hardware.keymaster@4.1-service.trustonic \
     android.hardware.media.c2@1.2-mediatek \
@@ -1665,12 +1667,7 @@ PRODUCT_PACKAGES += \
     vendor.oplus.hardware.charger@1.0-service \
     vendor.oplus.hardware.olc@2.0-service \
     vendor.oplus.hardware.oplusSensor@1.0-service \
-    vendor.oplus.hardware.performance@1.0-service \
-    android.hardware.gnss-service.mediatek \
-    gnss-mtk.xml \
-    gnss@2.1-service-mtk.xml \
-    android.hardware.gnss-impl-mediatek \
-    android.hardware.gnss@2.1-impl-mediatek
+    vendor.oplus.hardware.performance@1.0-service
 
 PRODUCT_PACKAGES += \
     vendor_lib_egl_libGLES_mali_so \
