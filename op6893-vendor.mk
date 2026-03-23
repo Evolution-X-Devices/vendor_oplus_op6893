@@ -572,6 +572,7 @@ PRODUCT_PACKAGES += \
     libdecrypt \
     libfile_op \
     libformatter \
+    libmp3dec_mtk \
     libgamehdr \
     libged \
     libgpu_aux \
