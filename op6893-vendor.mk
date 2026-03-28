@@ -354,6 +354,7 @@ PRODUCT_COPY_FILES += \
     vendor/oplus/op6893/proprietary/vendor/etc/init/android.hardware.media.c2@1.2-mediatek.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.media.c2@1.2-mediatek.rc \
     vendor/oplus/op6893/proprietary/vendor/etc/init/android.hardware.neuralnetworks@1.3-service-mtk-neuron.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.neuralnetworks@1.3-service-mtk-neuron.rc \
     vendor/oplus/op6893/proprietary/vendor/etc/init/android.hardware.secure_element@1.2-service-mediatek.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.secure_element@1.2-service-mediatek.rc \
+    vendor/oplus/op6893/proprietary/vendor/etc/init/android.hardware.usb@1.2-service-mediatekv2.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.usb@1.2-service-mediatekv2.rc \
     vendor/oplus/op6893/proprietary/vendor/etc/init/android.hardware.wifi@1.0-service-lazy.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.wifi@1.0-service-lazy.rc \
     vendor/oplus/op6893/proprietary/vendor/etc/init/atci_service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/atci_service.rc \
     vendor/oplus/op6893/proprietary/vendor/etc/init/atcid.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/atcid.rc \
@@ -1572,6 +1573,7 @@ PRODUCT_PACKAGES += \
     com.android.hotwordenrollment.common.util \
     vendor.oplus.hardware.performance-V1.0-java \
     android.hardware.neuralnetworks@1.3-service-mtk-mdla-dsp-gpu.xml \
+    android.hardware.usb@1.2-service-mediatekv2.xml \
     android.hardware.wifi@1.0-service.xml \
     gnss-mtk.xml \
     gnss@2.1-service-mtk.xml \
@@ -1616,6 +1618,7 @@ PRODUCT_PACKAGES += \
     android.hardware.media.c2@1.2-mediatek-64b \
     android.hardware.neuralnetworks@1.3-service-mtk-neuron \
     android.hardware.secure_element@1.2-service-mediatek \
+    android.hardware.usb@1.2-service-mediatekv2 \
     android.hardware.wifi@1.0-service-lazy \
     camerahalserver \
     mtkfusionrild \
