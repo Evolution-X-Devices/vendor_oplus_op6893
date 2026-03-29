@@ -526,7 +526,6 @@ PRODUCT_PACKAGES += \
     libaal_key \
     libaal_mtk \
     libaalservice \
-    libaedv \
     libaispq \
     libalsautils-v31 \
     libapmonitor_vendor \
