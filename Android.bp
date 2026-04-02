@@ -1256,6 +1256,48 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
+    name: "thermal_hal",
+    owner: "oplus",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: [
+                "proprietary/vendor/lib/hw/thermal_hal.so",
+            ],
+            shared_libs: [
+                "liblog",
+                "libcutils",
+                "libhardware",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/hw/thermal_hal.so",
+            ],
+            shared_libs: [
+                "liblog",
+                "libcutils",
+                "libhardware",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "both",
+    relative_install_path: "hw",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
     name: "vendor.mediatek.hardware.bluetooth.audio@2.1-impl",
     owner: "oplus",
     strip: {

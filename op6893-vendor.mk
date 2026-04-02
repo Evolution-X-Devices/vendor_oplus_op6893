@@ -502,6 +502,7 @@ PRODUCT_PACKAGES += \
     android.hardware.graphics.allocator@4.0-impl-mediatek \
     android.hardware.graphics.mapper@4.0-impl-mediatek \
     vulkan.mali \
+    thermal_hal \
     vendor.mediatek.hardware.bluetooth.audio@2.1-impl \
     vendor.mediatek.hardware.bluetooth.audio@2.2-impl \
     vendor.mediatek.hardware.keymaster_attestation@1.1-impl \
