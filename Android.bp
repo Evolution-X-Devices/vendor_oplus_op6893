@@ -37210,32 +37210,6 @@ cc_prebuilt_binary {
 }
 
 cc_prebuilt_binary {
-    name: "thermal_manager",
-    owner: "oplus",
-    target: {
-        android_arm: {
-            srcs: [
-                "proprietary/vendor/bin/thermal_manager",
-            ],
-            shared_libs: [
-                "libcutils",
-                "liblog",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "32",
-    strip: {
-        none: true,
-    },
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_binary {
     name: "thermalloadalgod",
     owner: "oplus",
     target: {
