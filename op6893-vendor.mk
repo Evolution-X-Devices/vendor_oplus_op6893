@@ -1647,7 +1647,6 @@ PRODUCT_PACKAGES += \
     recordevent \
     replayevent \
     rt5512_calibration \
-    rttv \
     swap_enable \
     thermal \
     thermal_core \
