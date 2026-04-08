@@ -8,8 +8,8 @@ soong_namespace {
         "hardware/google/interfaces",
         "hardware/google/pixel",
         "hardware/mediatek",
-        "hardware/mediatek/libmtkperf_client",
         "hardware/mediatek/libaedv",
+        "hardware/mediatek/libmtkperf_client",
         "hardware/oplus",
     ],
 }
@@ -4357,34 +4357,6 @@ cc_prebuilt_library_shared {
         },
     },
     compile_multilib: "both",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libmp3dec_mtk",
-    owner: "oplus",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm: {
-            srcs: [
-                "proprietary/vendor/lib/libmp3dec_mtk.so",
-            ],
-            shared_libs: [
-                "libmtk_drvb",
-                "liblog",
-                "libutils",
-                "libcutils",
-                "libc",
-                "libc++",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "32",
     prefer: true,
     soc_specific: true,
 }
@@ -11172,6 +11144,34 @@ cc_prebuilt_library_shared {
     },
     compile_multilib: "32",
     check_elf_files: false,
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libmp3dec_mtk",
+    owner: "oplus",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: [
+                "proprietary/vendor/lib/libmp3dec_mtk.so",
+            ],
+            shared_libs: [
+                "libmtk_drvb",
+                "liblog",
+                "libutils",
+                "libcutils",
+                "libc",
+                "libc++",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "32",
     prefer: true,
     soc_specific: true,
 }
@@ -20166,6 +20166,51 @@ cc_prebuilt_library_shared {
                 "libui_oplus",
                 "liblog",
                 "libutils",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libmtkmipc-ril",
+    owner: "oplus",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/libmtkmipc-ril.so",
+            ],
+            shared_libs: [
+                "libmtkutils",
+                "librilfusion",
+                "libmtknetutils",
+                "libratconfig",
+                "libmtksysutils",
+                "libmtkhardware_legacy",
+                "libsysenv",
+                "libmtkrilutils",
+                "libcrypto",
+                "libmtkcutils",
+                "libmtkproperty",
+                "libmtkrillog",
+                "libmtkconfigutils",
+                "libmtktinyxml",
+                "libmtkares",
+                "libmtknetcap",
+                "libwpfa",
+                "libnvram",
+                "libaedv",
+                "libbinder",
+                "libmipc",
                 "libc++",
                 "libc",
                 "libm",
@@ -33548,51 +33593,6 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libmtkmipc-ril",
-    owner: "oplus",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/libmtkmipc-ril.so",
-            ],
-            shared_libs: [
-                "libmtkutils",
-                "librilfusion",
-                "libmtknetutils",
-                "libratconfig",
-                "libmtksysutils",
-                "libmtkhardware_legacy",
-                "libsysenv",
-                "libmtkrilutils",
-                "libcrypto",
-                "libmtkcutils",
-                "libmtkproperty",
-                "libmtkrillog",
-                "libmtkconfigutils",
-                "libmtktinyxml",
-                "libmtkares",
-                "libmtknetcap",
-                "libwpfa",
-                "libnvram",
-                "libaedv",
-                "libbinder",
-                "libmipc",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
     name: "libOGLManager",
     owner: "oplus",
     strip: {
@@ -34848,14 +34848,6 @@ dex_import {
 }
 
 dex_import {
-    name: "mediatek-common",
-    owner: "oplus",
-    jars: [
-        "proprietary/system/framework/mediatek-common.jar",
-    ],
-}
-
-dex_import {
     name: "mediatek-framework",
     owner: "oplus",
     jars: [
@@ -34947,18 +34939,18 @@ prebuilt_etc_xml {
 }
 
 prebuilt_etc_xml {
-    name: "android.hardware.wifi@1.0-service.xml",
+    name: "android.hardware.usb@1.2-service-mediatekv2.xml",
     owner: "oplus",
-    src: "proprietary/vendor/etc/vintf/manifest/android.hardware.wifi@1.0-service.xml",
+    src: "proprietary/vendor/etc/vintf/manifest/android.hardware.usb@1.2-service-mediatekv2.xml",
     filename_from_src: true,
     sub_dir: "vintf/manifest",
     soc_specific: true,
 }
 
 prebuilt_etc_xml {
-    name: "android.hardware.usb@1.2-service-mediatekv2.xml",
+    name: "android.hardware.wifi@1.0-service.xml",
     owner: "oplus",
-    src: "proprietary/vendor/etc/vintf/manifest/android.hardware.usb@1.2-service-mediatekv2.xml",
+    src: "proprietary/vendor/etc/vintf/manifest/android.hardware.wifi@1.0-service.xml",
     filename_from_src: true,
     sub_dir: "vintf/manifest",
     soc_specific: true,
@@ -35992,6 +35984,43 @@ cc_prebuilt_binary {
 }
 
 cc_prebuilt_binary {
+    name: "android.hardware.usb@1.2-service-mediatekv2",
+    owner: "oplus",
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/bin/hw/android.hardware.usb@1.2-service-mediatekv2",
+            ],
+            shared_libs: [
+                "android.hardware.usb@1.0",
+                "android.hardware.usb@1.1",
+                "android.hardware.usb@1.2",
+                "android.hardware.usb@1.3",
+                "android.hardware.usb.gadget@1.0",
+                "android.hardware.usb.gadget@1.1",
+                "libbase",
+                "libcutils",
+                "libhardware",
+                "libhidlbase",
+                "liblog",
+                "libutils",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    strip: {
+        none: true,
+    },
+    prefer: true,
+    relative_install_path: "hw",
+    soc_specific: true,
+}
+
+cc_prebuilt_binary {
     name: "android.hardware.wifi@1.0-service-lazy",
     owner: "oplus",
     target: {
@@ -36015,43 +36044,6 @@ cc_prebuilt_binary {
                 "android.hardware.wifi@1.3",
                 "android.hardware.wifi@1.4",
                 "android.hardware.wifi@1.5",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    strip: {
-        none: true,
-    },
-    prefer: true,
-    relative_install_path: "hw",
-    soc_specific: true,
-}
-
-cc_prebuilt_binary {
-    name: "android.hardware.usb@1.2-service-mediatekv2",
-    owner: "oplus",
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/bin/hw/android.hardware.usb@1.2-service-mediatekv2",
-            ],
-            shared_libs: [
-                "android.hardware.usb@1.0",
-                "android.hardware.usb@1.1",
-                "android.hardware.usb@1.2",
-                "android.hardware.usb@1.3",
-                "android.hardware.usb.gadget@1.0",
-                "android.hardware.usb.gadget@1.1",
-                "libbase",
-                "libcutils",
-                "libhardware",
-                "libhidlbase",
-                "liblog",
-                "libutils",
                 "libc++",
                 "libc",
                 "libm",

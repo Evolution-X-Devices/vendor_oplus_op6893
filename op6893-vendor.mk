@@ -572,7 +572,6 @@ PRODUCT_PACKAGES += \
     libdecrypt \
     libfile_op \
     libformatter \
-    libmp3dec_mtk \
     libgamehdr \
     libged \
     libgpu_aux \
@@ -736,6 +735,7 @@ PRODUCT_PACKAGES += \
     libh264dec_sd.ca7 \
     libh264dec_se.ca7 \
     libh264enc_sa.ca7 \
+    libmp3dec_mtk \
     libmp4enc_sa.ca7 \
     libmp4enc_xa.ca7 \
     librcs_interface \
@@ -1005,6 +1005,7 @@ PRODUCT_PACKAGES += \
     libmtkconfig \
     libmtkconfigutils \
     libmtkisp_metadata \
+    libmtkmipc-ril \
     libmtknetcap \
     libmtkrilutils \
     libmtktinyxml \
@@ -1509,7 +1510,6 @@ PRODUCT_PACKAGES += \
     libDeVIS \
     libEIS \
     libOGLManager \
-    libmtkmipc-ril \
     libRbsFlow \
     libRbsFlow_cap \
     libVideoEnhance \
@@ -1558,7 +1558,6 @@ PRODUCT_PACKAGES += \
     HotwordEnrollmentOKGoogleRISCV \
     HotwordEnrollmentXGoogleRISCV \
     mediatek-carrier-config-manager \
-    mediatek-common \
     mediatek-framework \
     mediatek-ims-base \
     mediatek-ims-common \
