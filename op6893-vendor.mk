@@ -1509,9 +1509,11 @@ PRODUCT_PACKAGES += \
     libCamera_ov02b10mipiraw20615_Video_4k \
     libDeVIS \
     libEIS \
+    libFilterWrapper \
     libOGLManager \
     libRbsFlow \
     libRbsFlow_cap \
+    libSuperTextWrapper \
     libVideoEnhance \
     libWaterMark \
     lib_rectify \
